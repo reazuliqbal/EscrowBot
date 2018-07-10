@@ -1,0 +1,41 @@
+{
+  "name": "escrowbot",
+  "version": "1.0.0",
+  "description": "STEEM/SBD exchange bot for Discord",
+  "scripts": {
+    "start": "npm run build && node dist/bot.js",
+    "dev": "nodemon src/bot.js --exec babel-node",
+    "clean": "rimraf dist",
+    "build": "npm run clean && babel src -s -d dist --source-maps false"
+  },
+  "author": "Reazul Iqbal",
+  "license": "MIT",
+  "dependencies": {
+    "bitly": "^6.0.6",
+    "commando-provider-mongo": "^1.2.1",
+    "discord.js": "^11.3.2",
+    "discord.js-commando": "^0.10.0",
+    "dotenv": "^6.0.0",
+    "got": "^8.3.2",
+    "mongoose": "^5.2.2",
+    "nanoid": "^1.0.7",
+    "rimraf": "^2.6.2",
+    "sc2-sdk": "^1.0.2",
+    "steem": "^0.7.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeBull/EscrowBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodeBull/EscrowBot/issues"
+  },
+  "homepage": "https://github.com/CodeBull/EscrowBot#readme"
+}
